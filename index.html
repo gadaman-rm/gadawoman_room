@@ -1,0 +1,41 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GADAWoman Room</title>
+  <script type="module" src="./src/index.ts"></script>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="sidebar">
+      <sidebar-container class="sidebar-container">
+        <sidebar-item class="sidebar-item">Chat Room 1</sidebar-item>
+        <sidebar-item class="sidebar-item">Chat Room 2</sidebar-item>
+      </sidebar-container>
+    </div>
+    <div class="content">
+      <div class="messageContainer">
+        <chat-message>Hello, world!</chat-message>
+        <chat-message>Hello, world!</chat-message>
+        <chat-message>Hello, world!</chat-message>
+        <chat-message>Hello, world!</chat-message>
+      </div>
+      <div class="chatInputContainer">
+        <md-filled-text-field id="chatInput" type="textarea" rows="1">
+        </md-filled-text-field>
+        <md-filled-tonal-button id="sendButton">
+          Send
+          <svg slot="icon" viewBox="0 0 48 48">
+            <path d="M6 40V8l38 16Zm3-4.65L36.2 24 9 12.5v8.4L21.1 24 9 27Zm0 0V12.5 27Z" />
+          </svg>
+        </md-filled-tonal-button>
+      </div>
+    </div>
+  </div>
+
+</html>
