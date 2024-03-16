@@ -9,6 +9,7 @@ const brokerOptions: IClientOptions = {
   host: "coolpanel.ir",
   port: 9090,
   hostname: "coolpanel.ir",
+  protocol: "wss"
 };
 
 const chatCommunication = new ChatCommunication(brokerOptions);
@@ -96,9 +97,10 @@ class SidebarItem extends HTMLElement {
 customElements.define("sidebar-container", SidebarContainer);
 customElements.define("sidebar-item", SidebarItem);
 
-document.addEventListener("mqttConnectEvent", function (e: CustomEventInit) {
+document.addEventListener("mqttConnectEvent", function () {
   console.log(`Connected`);
   chatCommunication.subscribe("test");
+
 });
 
 const messageContainer = document.querySelector(".messageContainer");
